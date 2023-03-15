@@ -8,7 +8,7 @@ const Home:FC = () => {
   const [phoneProducts, setPhoneProducts] = useState<Product[]>([]);
   const [laptopProducts, setLaptopProducts] = useState<Product[]>([]);
   const [sunglassProducts, setSunglassProducts] = useState<Product[]>([]);
-  const [loading,setLoading] = useState(false);
+  const [loading,setLoading] = useState<boolean>(false);
 
   const navigate = useNavigate();
 

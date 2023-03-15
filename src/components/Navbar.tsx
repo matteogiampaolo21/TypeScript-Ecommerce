@@ -1,9 +1,9 @@
 
-import { NavigateFunction, useNavigate } from "react-router-dom";
+import { useNavigate } from "react-router-dom";
 
 
 function Navbar() {
-    const navigate:NavigateFunction = useNavigate();
+    const navigate = useNavigate();
 
     return (
         <nav className="navbar sticky-top navbar-expand-lg navbar-dark">

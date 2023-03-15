@@ -1,0 +1,205 @@
+.products-grid{
+    display: flex;
+    flex-direction: row;
+    margin-top: 3%;
+    justify-content: space-around;
+    align-content: center;
+
+    
+}
+#product-img{
+    min-width: 500px !important;
+    max-width: 500px !important;
+    height: 330px !important;
+    object-fit: cover;
+}
+
+.products{
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+    justify-items: center;
+    grid-gap: 20px;
+    margin: 0 5% 60px 5%;
+}
+.sidebar{
+    display: flex;
+    flex-direction: column;
+    row-gap: 10px;
+    margin-left: 5%;
+    padding-right: 5%;
+    background-color: #ffffff;
+    box-shadow: 2px 4px 10px #eaeaea;
+    max-height: 840px;
+}
+.sidebar a:hover{
+    color:#b300ff;
+}
+.product-grid-items{
+    
+    display: flex;
+    flex-direction: row;
+    background-color: #ffffff;
+    cursor: pointer;
+    box-shadow: 2px 4px 10px #eaeaea;
+}
+.product-grid-items:hover{
+    box-shadow: 5px 8px 10px #e7e7e7;
+    position: relative;
+    bottom: 4px;
+}
+
+
+/* //////////////////////////////////////////// Single Product Page ////////////////////////////////////// */
+.product-page{
+    display: flex;
+    flex-direction: row;
+    
+    justify-content: center;
+    align-content: center;
+    
+}
+
+
+.sidebar-single-page{
+    display: flex;
+    flex-direction: column;
+    row-gap: 10px;
+    padding-right: 5%;
+    background-color: #ffffff;
+    box-shadow: 2px 4px 10px #eaeaea;
+    max-height: 840px;
+}
+.sidebar-single-page a:hover{
+    color:#b300ff;
+}
+
+.product-info{
+    max-width: 548px;
+    display: flex;
+    flex-direction: column;
+    margin-left: 30px;
+    background-color: #ffffff;
+    box-shadow: 2px 4px 10px #eaeaea;
+    height: auto;
+}
+
+/* ////////////////////////////////////////////// cart ///////////////////////////////////////////////// */
+
+.cart{
+    display: flex;
+    flex-direction: row;
+    background-color: #ffffff;
+    cursor: pointer;
+    box-shadow: 2px 4px 10px #eaeaea;
+}
+.cart-container{
+    display: grid;
+    grid-template-columns: 900px 100px;
+    justify-content: center;
+    column-gap: 30px;
+    margin-top: 30px;
+}
+.cart img{
+    min-width: 185px !important;
+    max-width: 185px !important;
+    min-height: 185px;
+    max-height: 185px;
+    object-fit: cover;
+}
+.quantity-box{
+    display: flex;
+    background-color: #ffffff;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    box-shadow: 2px 4px 10px #eaeaea;
+}
+.clear-btn{
+    width: 1030px;
+    margin: 40px auto;
+}
+
+@media only screen and (max-width: 1300px) {
+    .products-grid{
+        flex-direction: column-reverse;
+        justify-content: space-evenly; 
+    }
+    
+    .sidebar{
+        margin-right: 5%;
+    }
+}
+
+@media only screen and (max-width: 800px) {
+    .products-grid{
+        align-items: center;
+    }
+    .product-grid-items{
+        flex-direction: column;
+        justify-content: space-evenly;
+        justify-items: center;
+    }
+    .products{
+        justify-content: center;
+        max-width: 500px;
+        margin: 0 15% 60px 15%;
+    }
+    .sidebar{
+        min-width: 500px;
+    }
+}
+@media only screen and (max-width: 535px) {
+    .products{
+        grid-gap: 30px;
+        max-width: 300px;
+    }
+    .sidebar{
+        margin-right: 5%;
+        min-width: 300px;
+        max-height: 840px;
+    }
+    #product-img{
+        min-width: 300px !important;
+        max-width: 300px !important;
+        width: 300px !important;
+        height: 198px !important;
+        object-fit: cover;
+    }
+}
+
+/* Single Product Media */
+@media only screen and (max-width: 800px) {
+    .product-page{
+        flex-direction: column-reverse;
+        align-items: center;
+    }
+    
+    
+    .sidebar-single-page{
+        margin-top: 30px;
+        margin-left: 0px !important;
+        min-width: 548px;
+        max-width: 548px;
+    } 
+    .product-info{
+        margin: 0;
+    }
+}
+@media only screen and (max-width: 575px) {
+    
+    .sidebar-single-page{
+        min-width: 300px;
+        max-width: 300px;
+    } 
+    .product-info{
+        max-width: 300px;
+    }
+    .product-info img{
+        min-width: 250px !important;
+        max-width: 250px !important;
+        height: 165px !important;
+        object-fit: cover;
+    }
+}
+
