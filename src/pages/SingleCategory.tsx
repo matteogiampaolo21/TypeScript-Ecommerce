@@ -1,14 +1,16 @@
 import {FC, useEffect, useState } from 'react'
-import { useNavigate } from "react-router-dom";
+import { useNavigate, useParams } from "react-router-dom";
 import axios from 'axios';
 
 import { Product } from '../types';
 import "../styles/Products.css"
 
+import { capFirst } from '../utilities/utilites';
 
 
 
-const AllProducts:FC = () => {
+
+const SingleCategory:FC = () => {
   
 
   const [loading,setLoading] = useState<boolean>(false);
@@ -18,27 +20,27 @@ const AllProducts:FC = () => {
   const [products,setProducts] = useState<Product[]>([])
   const [categories, setCategories] = useState<string[]>([])
 
+  let {category} = useParams()
 
   useEffect(() => {
 
     const handleFetchData = async () => {
       
-      await setLoading(true)
+        await setLoading(true)
 
-      const responseCategory = await axios.get('https://dummyjson.com/products/categories');
-      const categories:string[] = responseCategory.data
-      setCategories(categories);
+        const responseCategory = await axios.get('https://dummyjson.com/products/categories');
+        const categories:string[] = responseCategory.data
+        setCategories(categories);
   
-     
-      const responseProducts = await axios.get('https://dummyjson.com/products');
-      const data:Product[] = await responseProducts.data.products;
-      setProducts(data)
-      setLoading(false)
+        const responseProducts = await axios.get(`https://dummyjson.com/products/category/${category}`);
+        const data = await responseProducts.data.products;
+        setProducts(data)
+        await setLoading(false)
 
     }
     handleFetchData().catch(console.error);
 
-  },[])
+  },[category])
 
   return (
     <div>
@@ -47,7 +49,7 @@ const AllProducts:FC = () => {
       <div className='loader-container'><div className="loader"></div></div>
       : 
       <div>
-        <h1 className='text-center gradient-bg pt-5 pb-5 m-0'>All Products</h1>
+        <h1 className='text-center gradient-bg pt-5 pb-5 m-0'>{capFirst(category)}</h1>
         <div className='products-grid'>
 
 
@@ -84,4 +86,4 @@ const AllProducts:FC = () => {
   )
 }
 
-export default AllProducts
+export default SingleCategory;

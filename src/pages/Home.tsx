@@ -50,7 +50,7 @@ const Home:FC = () => {
             <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Excepturi quidem velit eius? Provident impedit fuga officia sint, possimus maxime qui.</p>
             
             <button type="button" onClick={()=>{navigate("/cart")}} className="btn btn-lg btn-purple mr-2 mb-2">View Cart</button>
-            <button type="button"  className="btn btn-lg btn-outline-light mb-2">Latest Items</button>  
+            <button type="button" onClick={()=>{navigate("/products")}}  className="btn btn-lg btn-outline-light mb-2">View Products</button>  
           
         </div>
         <div className='hero-img'></div>
