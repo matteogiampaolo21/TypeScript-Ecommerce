@@ -4,6 +4,8 @@ import Navbar from "./components/Navbar";
 import Home from "./pages/Home";
 import AllProducts from "./pages/AllProducts";
 import SingleCategory from "./pages/SingleCategory";
+import SingleProduct from "./pages/SingleProduct";
+import Cart from "./pages/Cart";
 import Footer from "./components/Footer";
 
 import "./styles/App.css"
@@ -17,8 +19,10 @@ function App() {
            <Route path="/" element={<Home />}/>
            <Route path="/products" element={<AllProducts/>} />
            <Route path="/products/:category" element={<SingleCategory/>} />
+           <Route path="/product/:productID" element={<SingleProduct/>} />
+           <Route path="/cart" element={<Cart/>} />
           {/*
-          <Route path="/product/:productID" element={<Product/>} />
+          
           <Route path="/cart" element={<Cart/>} />
           <Route path="/about" element={<About/>} />
           <Route path="*" element={<ErrorPage />} /> */}
