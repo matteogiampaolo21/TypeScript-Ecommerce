@@ -2,7 +2,7 @@
     display: flex;
     flex-direction: row;
     margin-top: 3%;
-    justify-content: space-around;
+    justify-content: center;
     align-content: center;
 
     
@@ -41,6 +41,7 @@
     flex-direction: row;
     background-color: #ffffff;
     cursor: pointer;
+    max-width: 800px;
     box-shadow: 2px 4px 10px #eaeaea;
 }
 .product-grid-items:hover{
@@ -57,6 +58,9 @@
     
     .sidebar{
         margin-right: 5%;
+    }
+    .product-grid-items{
+        max-width: fit-content;
     }
 }
 

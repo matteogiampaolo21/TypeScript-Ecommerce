@@ -75,3 +75,13 @@ nav{
 .about-info h3{
     font-size: 2.5rem;
 }
+@media only screen and (max-width: 570px) {
+    .about-info{
+        width: 80%;
+    }
+}
+@media only screen and (max-width: 380px) {
+    .about-info{
+        width: 90%;
+    }
+}

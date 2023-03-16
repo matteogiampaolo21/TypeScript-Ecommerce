@@ -94,9 +94,9 @@ function SingleProduct() {
                     <h5 className=''><b>Price:</b> <del>${product.price}</del> <span className='text-success'>${discount}</span></h5>
                     <h5 className=''><b>Rating:</b> {product.rating}/5</h5>
                     <h5 className='mb-5'><b>Brand:</b> {product.brand}</h5>
-                    <img className='d-block rounded mb-5' style={{objectFit:"cover"}} width={500} height={330} src={product.thumbnail} alt="" />
-                    <span className='badge btn-block mt-5  badge-danger btn-sm'><h5 className='m-1'>Save {product.discountPercentage}% !</h5></span>
-                    <button onClick={handleClick} className='d-block btn-block mt-2 mb-1 btn btn-purple'><b>Add to Cart</b></button>
+                    <img className='d-block rounded mb-2' style={{objectFit:"cover"}} width={500} height={330} src={product.thumbnail} alt="" />
+                    
+                    <button onClick={handleClick} className='d-block btn-block mt-5 py-3 btn btn-purple'><b>Add to Cart</b></button>
                 </div>
             </div>}
         </div>

@@ -21,6 +21,9 @@ function Navbar() {
                         <a className="nav-link hover-color" href="/products"><h5 className='nav-pages'>Products </h5></a>
                     </li>
                     <li className="nav-item active">
+                        <a className="nav-link hover-color" href="/cart"><h5 className='nav-pages'>Cart </h5></a>
+                    </li>
+                    <li className="nav-item active">
                         <a className="nav-link hover-color" href="/about"><h5 className='nav-pages'>About Us </h5></a>
                     </li>
                 </ul>

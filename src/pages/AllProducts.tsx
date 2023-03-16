@@ -68,7 +68,7 @@ const AllProducts:FC = () => {
                       <h2>{x.title}</h2>
                       <p className='mr-4'>{x.description}</p>
                       <h5><b>Price:</b> ${x.price}</h5>
-                      <span className='mb-3 badge badge-danger btn-sm'><h5 className='m-1'>Save {x.discountPercentage}% !</h5></span>
+                      
                     </div>
                   </div>
                 )
